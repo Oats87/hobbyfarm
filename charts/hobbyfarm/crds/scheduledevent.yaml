@@ -13,6 +13,10 @@ spec:
     - se
   scope: Cluster
   additionalPrinterColumns:
+  - name: EventName
+    type: string
+    description: The event name defined for the ScheduledEvent
+    JSONPath: .spec.event_name
   - name: AccessCode
     type: string
     description: The access code defined for the ScheduledEvent
