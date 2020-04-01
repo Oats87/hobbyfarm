@@ -12,3 +12,33 @@ spec:
     shortNames:
     - se
   scope: Cluster
+  additionalPrinterColumns:
+  - name: AccessCode
+    type: string
+    description: The access code defined for the ScheduledEvent
+    JSONPath: .spec.access_code
+  - name: Creator
+    type: string
+    description: The creator of the ScheduledEvent
+    JSONPath: .spec.creator
+  - name: Active
+    type: string
+    description: Active status
+    JSONPath: .status.active
+  - name: Provisioned
+    type: string
+    description: Provisioned status
+    JSONPath: .status.provisioned
+  - name: Ready
+    type: string
+    description: Ready status
+    JSONPath: .status.ready
+  - name: Start
+    type: string
+    description: Start time
+    JSONPath: .spec.start_time
+  - name: End
+    type: string
+    description: End time
+    JSONPath: .spec.end_time
+
